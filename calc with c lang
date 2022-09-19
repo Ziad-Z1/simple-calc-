@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<cs50.h>
+
+float pl(float a ,float b);
+float sub(float a , float b);
+long multi (float a, float b);
+float div(float a, float b);
+
+int main(void){
+    float x = get_float("x: ");
+    float y = get_float("y: ");
+    char z = get_char("what kind of problem ? \n");
+    if( z == '+'){
+    printf("result: %.2f  \n",pl(x,y));
+    }else if( z == '-'){
+    printf("result: %.2f \n",sub(x,y));
+}
+
+    if( z == '*'){
+    printf("result: %li  \n",multi(x,y));
+    }else if( z == '/'){
+    printf("result: %.2f \n",div(x,y));
+}
+}
+
+//plus
+float pl(float a ,float b){
+    return a + b;
+}
+//minus
+float sub(float a , float b){
+    return a - b;
+}
+//multi
+long multi (float a, float b){
+    return a*b;
+}
+//division
+float div(float a, float b){
+    return a/b;
+}
